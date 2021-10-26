@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
+import AddService from './pages/AddService/AddService';
 import BookService from './pages/BookService/BookService';
+import DeleteService from './pages/DeleteService/DeleteService';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/login/Login/Login';
 import PrivateRoute from './pages/login/PrivateRoute/PrivateRoute';
@@ -26,6 +28,12 @@ function App() {
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/addService">
+              <AddService></AddService>
+            </Route>
+            <Route path="/deleteService">
+              <DeleteService></DeleteService>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
